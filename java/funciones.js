@@ -4,6 +4,7 @@ function validar() {
     
     if (user === "Java" && password === "123456") {
         alert("Bienvenido al sistema");
+        window.location.href = "encuesta.html";
         return true;
     } else {
         alert("Usuario incorrecto");

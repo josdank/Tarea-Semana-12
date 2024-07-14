@@ -21,6 +21,7 @@ function login (){
     }
 }
 
+/*
 //Función para el formulario
 function registrarUsuario() {
 
@@ -70,4 +71,4 @@ function registrarUsuario() {
 // Función para regresar a la página anterior (histórico del navegador)
 function regresarPaginaAnterior() {
     window.history.back();
-}
+}*/
