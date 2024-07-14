@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <div class="encuesta">
+        <form id="estudiantes">
+            <h2>Encuesta Estudiantil</h2>
+            <label for="">Nombre: </label>
+            <input type="text" id="nombre" required>
+    
+            <label for="">Genero: </label>
+            Masculino: <input type="radio" id="masculino" value="masculino">
+            Femenino: <input type="radio" id="femenino" value="femenino">
+    
+            <label for="">Edad: </label>
+            <input type="number" id="edad">
+
+            <label for="">Correo Electronico: </label>
+            <input type="email" id="correo">
+
+            <label for="">Pais de Residencia: </label>3
+            <input type="text" id="residencia">
+
+            <label for="">Hobbies: </label>
+            <textarea name="hobbie" id="hobbies"></textarea>
+
+            <label for="">Curso: </label>
+            <select id="curso">
+                <option value="course1">Curso 1</option>
+                <option value="course2">Curso 2</option>
+                <option value="course3">Curso 3</option>
+            </select>
+            
+            <label for="">Número de horas de clases de capacitación: </label>
+            <select id="horas">
+                <option value="10">10 horas</option>
+                <option value="20">20 horas</option>
+                <option value="30">30 horas</option>
+            </select>
+
+            <button type="submit">Enviar</button>
+            <button type="reset">Borrar</button>
+            <span class="error-message hidden" id="formError">Por favor, completa todos los campos correctamente</span>
+        </form>
+    </div>
+   
+    <script src="funciones.js"></script>
+</body>
+</html>
