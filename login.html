@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilo_login.css">
+    <script src="java/funciones.js"></script>
+</head>
+<body>
+    <form class= "login "action="encuesta.html" onsubmit="return login()">
+        <div class="container login-container">
+            <div class="login-header">
+                <img src="img/avatar.png" alt="Avatar" class="avatar">
+                <h2>Login</h2>
+            </div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">User:</label>
+                    <input type="text" class="form-control" id="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" class="form-control" id="password" required>
+                </div>
+                <button type="button" class="btn btn-primary">Iniciar</button><br>
+            </form>
+            <div id="error-message" class="text-danger mt-2"></div>
+            <p class="mt-2">Aún no te has registrado? <a href="encuesta.html">Regístrate</a></p>
+    </form>
+    </div>
+</body>
+</html>
