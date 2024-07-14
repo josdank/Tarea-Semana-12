@@ -46,7 +46,7 @@ document.getElementById('form-cuestionario').addEventListener('submit', function
 function evaluarCuestionario(pregunta1, pregunta2, pregunta3, pregunta4) {
     let puntaje = 0;
 
-    if (pregunta1.toLowerCase() === 'respuesta correcta') puntaje += 2;
+    if (pregunta1.toLowerCase() === 'marte') puntaje += 2;
     if (pregunta2 === 'Verdadero') puntaje += 2;
     if (pregunta3 === 'opcion2') puntaje += 2;
 
