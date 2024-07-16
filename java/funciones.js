@@ -11,7 +11,6 @@ function validar() {
         return false;
     }
 }
-// Archivo: java/funciones.js
 document.getElementById('horas').addEventListener('change', function() {
     const horas = parseInt(this.value);
     const precioTotal = horas * 10;
