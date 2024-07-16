@@ -63,6 +63,6 @@ function evaluarCuestionario(pregunta1, pregunta2, pregunta3, pregunta4) {
     } else if (puntaje < 9) {
         return 'Buena';
     } else {
-        return 'Sobresaliente';
+        return '¡Sobresaliente!';
     }
 }
