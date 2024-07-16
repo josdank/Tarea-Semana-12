@@ -1,55 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulario de Registro</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <script src="java/funciones.js" defer></script>
 </head>
 <body>
-
-    <div class="encuesta">
-        <form id="estudiantes" action="cuestionario.html">
-            <h2>Encuesta Estudiantil</h2>
-            <label for="">Nombre: </label>
-            <input type="text" id="nombre" required>
-    
-            <label for="">Genero: </label>
-            Masculino: <input type="radio" id="masculino" value="masculino">
-            Femenino: <input type="radio" id="femenino" value="femenino">
-    
-            <label for="">Edad: </label>
-            <input type="number" id="edad">
-
-            <label for="">Correo Electronico: </label>
-            <input type="email" id="correo">
-
-            <label for="">Pais de Residencia: </label>
-            <input type="text" id="residencia">
-
-            <label for="">Hobbies: </label>
-            <textarea name="hobbie" id="hobbies"></textarea>
-
-            <label for="">Curso: </label>
-            <select id="curso">
-                <option value="course1">Curso 1</option>
-                <option value="course2">Curso 2</option>
-                <option value="course3">Curso 3</option>
-            </select>
-            
-            <label for="">Número de horas de clases de capacitación: </label>
-            <select id="horas">
-                <option value="10">10 horas (100$)</option>
-                <option value="20">20 horas (200$)</option>
-                <option value="30">30 horas (300$)</option>
-            </select>
-
-            <button type="submit">Enviar</button>
+    <form id="registroForm">
+        <h2>Registro de Usuario</h2>
+        <label for="nombre"><strong>Nombre:</strong></label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+        <span class="error-message hidden" id="nombreError">Por favor, ingresa tu nombre.</span>
+        
+        <label><strong>Género:</strong></label>
+        <label for="masculino">Masculino</label>
+        <input type="radio" id="masculino" name="genero" value="Masculino">
+        <label for="femenino">Femenino</label>
+        <input type="radio" id="femenino" name="genero" value="Femenino">
+        <label for="otro">Otro</label>
+        <input type="radio" id="otro" name="genero" value="Otro">
+        <span class="error-message hidden" id="generoError">Por favor, selecciona tu género.</span>
+        
+        <label for="edad"><strong>Edad:</strong></label>
+        <input type="number" id="edad" name="edad" placeholder="Ingresa tu edad" required>
+        <span class="error-message hidden" id="edadError">Por favor, ingresa una edad válida.</span>
+        
+        <label for="email"><strong>Correo Electrónico:</strong></label>
+        <input type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico" required>
+        <span class="error-message hidden" id="emailError">Por favor, ingresa un correo electrónico válido.</span>
+        
+        <label for="pais"><strong>País de residencia:</strong></label>
+        <input type="text" id="pais" name="pais" placeholder="Ingresa tu país de residencia" required>
+        <span class="error-message hidden" id="paisError">Por favor, ingresa tu país de residencia.</span>
+        
+        <label for="hobbies"><strong>Gustos/Hobbies:</strong></label>
+        <textarea id="hobbies" name="hobbies" placeholder="Ingresa tus gustos o hobbies" required></textarea>
+        <span class="error-message hidden" id="hobbiesError">Por favor, ingresa tus gustos o hobbies.</span>
+        
+        <label for="curso"><strong>Elegir Curso:</strong></label>
+        <select id="curso" name="curso" required>
+            <option value="">Selecciona un curso</option>
+            <option value="Curso1">Curso 1</option>
+            <option value="Curso2">Curso 2</option>
+            <option value="Curso3">Curso 3</option>
+        </select>
+        <span class="error-message hidden" id="cursoError">Por favor, selecciona un curso.</span>
+        
+        <label for="horas"><strong>Número de horas de clases:</strong></label>
+        <select id="horas" name="horas" required>
+            <option value="">Selecciona las horas</option>
+            <option value="10">10 horas</option>
+            <option value="20">20 horas</option>
+            <option value="30">30 horas</option>
+        </select>
+        <span class="error-message hidden" id="horasError">Por favor, selecciona el número de horas.</span>
+        
+        <p id="precioTotal">Precio Total: $0</p>
+        
+        <p id="formError" class="hidden" style="color: red;">Por favor, complete todos los campos correctamente.</p>
+        <p id="formThankYou" class="hidden" style="color: green;">Gracias por tu participación. El proceso ha finalizado.</p>
+        
+        <Center>
+            <button type="submit">Enviar</button><br><br>
             <button type="reset">Borrar</button>
-            <span class="error-message hidden" id="formError">Por favor, completa todos los campos correctamente</span>
-        </form>
-    </div>
-   
-    <script src="java/funciones.js"></script>
+        </Center>
+    </form>
 </body>
 </html>

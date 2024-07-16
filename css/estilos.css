@@ -1,19 +1,20 @@
+/* Archivo: css/estilos.css */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #f4f4f4;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     height: 100vh;
 }
 
-.login, .encuesta {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
+form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(148, 51, 251, 0.366);
+    max-width: 500px;
+    width: 750px;
 }
 
 h2 {
@@ -23,33 +24,73 @@ h2 {
 
 label {
     display: block;
-    margin-bottom: 5px;
+    margin: 10px 0 5px;
 }
 
-input, textarea, select, button {
+input, select, textarea {
     width: 100%;
-    padding: 8px auto;
+    padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 5px;
 }
 
-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3;
+input[type="radio"] {
+    width: auto;
 }
 
 .error-message {
     color: red;
+    font-size: 12px;
+    display: none;
+}
+
+.error-message.hidden {
     display: none;
 }
 
 .hidden {
     display: none;
+}
+
+.error {
+    border-color: red;
+}
+
+button {
+    background: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #218838;
+}
+
+/* estilos.css */
+.hidden {
+    display: none;
+}
+
+.error-message {
+    color: red;
+}
+
+input:invalid,
+textarea:invalid,
+select:invalid {
+    border: 2px solid red;
+}
+
+/* Estilo para campos de entrada en estado inválido cuando se usa pseudo-clase :invalid */
+input:invalid:focus,
+textarea:invalid:focus,
+select:invalid:focus {
+    outline: none;
+    border-color: red;
+    box-shadow: 0 0 5px red;
 }

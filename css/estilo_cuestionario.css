@@ -1,5 +1,5 @@
 .hidden {
-    display:none;
+    display: none;
 }
 
 form {
@@ -63,7 +63,7 @@ button[type="submit"]:hover {
 }
 
 #resultado {
-    margin: 20px;
+    margin-top: 20px;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -75,6 +75,22 @@ button[type="submit"]:hover {
 }
 
 #resultado p {
+    font-size: 1.2em;
+}
+
+#respuestas {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #e6ffe6;
+}
+
+#respuestas h2 {
+    color: #009900;
+}
+
+#respuestas p {
     font-size: 1.2em;
 }
 

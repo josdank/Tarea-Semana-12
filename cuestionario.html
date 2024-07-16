@@ -3,47 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cuestionario</title>
     <link rel="stylesheet" href="css/estilo_cuestionario.css">
-
 </head>
 <body>
     <form id="form-cuestionario">
         <h2>Cuestionario</h2>
         <center><img src="img/sistema-solar-e1564771406947-800x400.jpg" alt="Sistema Solar"></center>
-        <label for="pregunta1">Ingrese el nombre del cuarto planeta del sistema solar</label>
-        <input type="text" id="pregunta1" name="pregunta1" placeholder="Responda la pregunta 1">
+        <label for="pregunta1">#1 -Ingrese el nombre del cuarto planeta del sistema solar</label>
+        <input type="text" id="pregunta1" name="pregunta1" placeholder="Responda la pregunta 1"><br>
         <span class="error-message hidden" id="error-pregunta1">Esta pregunta es requerida</span>
 
-        <label> ¿La tierra es el tercer planeta del sistema solar?</label>
+        <label>#2 ¿La tierra es el tercer planeta del sistema solar?</label>
         <input type="radio" id="pregunta2-verdadero" name="pregunta2" value="Verdadero"> Verdadero
         <input type="radio" id="pregunta2-falso" name="pregunta2" value="Falso"> Falso
-        <span class="error-message hidden" id="error-pregunta2">Esta pregunta es requerida</span>
+        <span class="error-message hidden" id="error-pregunta2">Esta pregunta es requerida</span><br><br>
 
-        <label for="pregunta3">Objeto astronómico con una fuerza gravitacional tan fuerte que nada, ni siquiera la luz, puede escapar de él. </label>
+        <label for="pregunta3">#3 Objeto astronómico con una fuerza gravitacional tan fuerte que nada, ni siquiera la luz, puede escapar de él. </label>
         <select id="pregunta3" name="pregunta3">
             <option value="">Seleccione una opción</option>
             <option value="opcion1">Andromeda</option>
             <option value="opcion2">Agujero negro</option>
             <option value="opcion3">Orion</option>
         </select>
-        <span class="error-message hidden" id="error-pregunta3">Esta pregunta es requerida</span>
+        <span class="error-message hidden" id="error-pregunta3">Esta pregunta es requerida</span><br>
 
-        <label>¿De que otra forma se hacia referencia al tartaro?</label>
+        <label>#4 ¿De que otra forma se hacía referencia al tartaro?(Escoja dos opciones)</label>
         <input type="checkbox" id="pregunta4-opcion1" name="pregunta4" value="Opción 1"> Hades
         <input type="checkbox" id="pregunta4-opcion2" name="pregunta4" value="Opción 2"> Olimpo
         <input type="checkbox" id="pregunta4-opcion3" name="pregunta4" value="Opción 3"> Erebo
-        <span class="error-message hidden" id="error-pregunta4">Esta pregunta es requerida</span>
+        <input type="checkbox" id="pregunta4-opcion3" name="pregunta4" value="Opción 3"> Infratierra
+        <input type="checkbox" id="pregunta4-opcion3" name="pregunta4" value="Opción 3"> Lugar Caido
+        <span class="error-message hidden" id="error-pregunta4">Esta pregunta es requerida</span><br><br>
+
+        <label for="pregunta5">#5 ¿Quién era considerada la diosa de la sabiduría en la Antigua Grecia?</label>
+        <select id="pregunta5" name="pregunta5">
+            <option value="">Seleccione una opción</option>
+            <option value="opcion1">Hera</option>
+            <option value="opcion2">Atenea</option>
+            <option value="opcion3">Hestia</option>
+            <option value="opcion4">Romia</option>
+            <option value="opcion5">Nemesis</option>
+            <option value="opcion6">Hebe</option>
+            <option value="opcion7">Afrodita</option>
+        </select>
+        <span class="error-message hidden" id="error-pregunta5">Esta pregunta es requerida</span><br><br>
 
         <button type="submit">Culminar Evaluación</button>
     </form>
 
+    <!-- Sección para mostrar los resultados y respuestas del cuestionario -->
     <div id="resultado" class="hidden">
-        <h2>Resultado</h2>
-        <img src="img/OIP.jpg" alt="">
-        <p id="resultado-texto"></p>
+        <center>
+            <h2>Resultado</h2>
+            <img src="img/OIP.jpg" alt="">
+            <p id="resultado-texto"></p>
+        </center>
     </div>
 
-    <script src="java/cuestionario"></script>
+    <div id="respuestas" class="hidden">
+        <h2>Respuestas del Cuestionario</h2>
+        <p id="respuestas-texto"></p>
+    </div>
+
+    <script src="java/cuestionario.js"></script>
 </body>
 </html>
